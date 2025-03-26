@@ -1,6 +1,57 @@
 # DataGamePipe
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+## Autor
+
+- [@jujubalandia](https://www.github.com/jujubalandia)
+
 A End to End Data Engineering Project  for the Data Engineering ZooCamp Course 2025
+
+- [DataGamePipe](#datagamepipe)
+- [Backloggd Video Game Analysis Data Pipeline](#backloggd-video-game-analysis-data-pipeline)
+  * [Project Overview](#project-overview)
+  * [Architecture](#architecture)
+  * [Data Pipeline Stages](#data-pipeline-stages)
+  * [Data Model](#data-model)
+    + [Games source file](#games-source-file)
+    + [Developers source file](#developers-source-file)
+    + [Platforms source file](#platforms-source-file)
+    + [Genres source file](#genres-source-file)
+    + [Scores source file](#scores-source-file)
+  * [Infrastructure as Code](#infrastructure-as-code)
+  * [Error Handling](#error-handling)
+  * [Deployment](#deployment)
+- [Hands On Time: Backloggd Video Game Analysis Data Pipeline - Implementation Steps](#hands-on-time-backloggd-video-game-analysis-data-pipeline---implementation-steps)
+  * [1. Setting up the GCP Development Environment](#1-setting-up-the-gcp-development-environment)
+  * [2. Infrastructure Setup with Terraform](#2-infrastructure-setup-with-terraform)
+  * [3. Configure Composer and dlt Hub for Data Ingestion](#3-configure-composer-and-dlt-hub-for-data-ingestion)
+  * [4. Develop Data Processing & Transformation Scripts](#4-develop-data-processing--transformation-scripts)
+  * [5. Automating the Data Pipeline Transformation with Composer](#5-automating-the-data-pipeline-transformation-with-composer)
+  * [6. Visualization with Streamlit](#6-visualization-with-streamlit)
+  * [Project Summary and Specifications](#project-summary-and-specifications)@Jujubalandia ➜ /workspaces/DataGamePipe (main) $ markdown-toc README.md
+- [DataGamePipe](#datagamepipe)
+- [Backloggd Video Game Analysis Data Pipeline](#backloggd-video-game-analysis-data-pipeline)
+  * [Project Overview](#project-overview)
+  * [Architecture](#architecture)
+  * [Data Pipeline Stages](#data-pipeline-stages)
+  * [Data Model](#data-model)
+    + [Games source file](#games-source-file)
+    + [Developers source file](#developers-source-file)
+    + [Platforms source file](#platforms-source-file)
+    + [Genres source file](#genres-source-file)
+    + [Scores source file](#scores-source-file)
+  * [Infrastructure as Code](#infrastructure-as-code)
+  * [Error Handling](#error-handling)
+  * [Deployment](#deployment)
+- [Hands On Time: Backloggd Video Game Analysis Data Pipeline - Implementation Steps](#hands-on-time-backloggd-video-game-analysis-data-pipeline---implementation-steps)
+  * [1. Setting up the GCP Development Environment](#1-setting-up-the-gcp-development-environment)
+  * [2. Infrastructure Setup with Terraform](#2-infrastructure-setup-with-terraform)
+  * [3. Configure Composer and dlt Hub for Data Ingestion](#3-configure-composer-and-dlt-hub-for-data-ingestion)
+  * [4. Develop Data Processing & Transformation Scripts](#4-develop-data-processing--transformation-scripts)
+  * [5. Automating the Data Pipeline Transformation with Composer](#5-automating-the-data-pipeline-transformation-with-composer)
+  * [6. Visualization with Streamlit](#6-visualization-with-streamlit)
+- [Project Summary and Specifications](#project-summary-and-specifications)
 
 # Backloggd Video Game Analysis Data Pipeline
 
@@ -198,7 +249,7 @@ This section outlines the step-by-step implementation of the Backloggd video gam
     * Include line charts, bar charts, and interactive tables with pagination (25 rows per page).
     * Handle empty filter results by displaying data for all years and a message indicating no data matched the specific filters.
 
-### Project Summary and Specifications
+# Project Summary and Specifications
 
 * **Data Source:** Backloggd dataset (Kaggle)
 * **Data Types:**  [Refer to the data model section in the main README]
@@ -207,3 +258,15 @@ This section outlines the step-by-step implementation of the Backloggd video gam
 * **Filtering:** By individual years, single genre, platform, and developer/publisher
 * **Empty Filter Handling:** Display data for all years with an informative message
 * **Deployment:** Streamlit on Cloud Run (public access, no authentication)
+
+## Feedback
+
+If you want to give your two cents don't be shy and let me know [@jujubalandia](https://www.github.com/jujubalandia)
+
+## Contributing
+
+Contributions are welcome!
+
+## License 
+
+[MIT](https://choosealicense.com/licenses/mit/)
