@@ -8,11 +8,11 @@
 
 A End to End Data Engineering Project  for the Data Engineering ZooCamp Course 2025
 
-## Table of Contents
+# Table of Contents
 
 - [DataGamePipe](#datagamepipe)
   * [Autor](#autor)
-  * [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Backloggd Video Game Analysis Data Pipeline](#backloggd-video-game-analysis-data-pipeline)
   * [Project Overview](#project-overview)
   * [Architecture](#architecture)
@@ -26,20 +26,21 @@ A End to End Data Engineering Project  for the Data Engineering ZooCamp Course 2
   * [Infrastructure as Code](#infrastructure-as-code)
   * [Error Handling](#error-handling)
   * [Deployment](#deployment)
-- [Hands On Time: Backloggd Video Game Analysis Data Pipeline - Implementation Steps](#hands-on-time-backloggd-video-game-analysis-data-pipeline---implementation-steps)
-- [Prerequisites](#prerequisites)
-  * [1. Google Cloud Platform (GCP) Account and Project](#1-google-cloud-platform-gcp-account-and-project)
-  * [2. Development Environment](#2-development-environment)
-  * [3. Required Tools and Libraries](#3-required-tools-and-libraries)
-  * [4. Python Packages](#4-python-packages)
-  * [5. Kaggle API Key (If using Kaggle directly)](#5-kaggle-api-key-if-using-kaggle-directly)
-  * [6. Access and Permissions](#6-access-and-permissions)
-  * [1. Setting up the GCP Development Environment](#1-setting-up-the-gcp-development-environment)
-  * [2. Infrastructure Setup with Terraform](#2-infrastructure-setup-with-terraform)
-  * [3. Configure Composer and dlt Hub for Data Ingestion](#3-configure-composer-and-dlt-hub-for-data-ingestion)
-  * [4. Develop Data Processing & Transformation Scripts](#4-develop-data-processing--transformation-scripts)
-  * [5. Automating the Data Pipeline Transformation with Composer](#5-automating-the-data-pipeline-transformation-with-composer)
-  * [6. Visualization with Streamlit](#6-visualization-with-streamlit)
+- [Backloggd Video Game Analysis Data Pipeline - Implementation Steps](#backloggd-video-game-analysis-data-pipeline---implementation-steps)
+  * [Prerequisites](#prerequisites)
+    + [1. Google Cloud Platform (GCP) Account and Project](#1-google-cloud-platform-gcp-account-and-project)
+    + [2. Development Environment](#2-development-environment)
+    + [3. Required Tools and Libraries](#3-required-tools-and-libraries)
+    + [4. Python Packages](#4-python-packages)
+    + [5. Kaggle API Key (If using Kaggle directly)](#5-kaggle-api-key-if-using-kaggle-directly)
+    + [6. Access and Permissions](#6-access-and-permissions)
+  * [Hands On Time: Step By Step](#hands-on-time-step-by-step)
+    + [1. Setting up the GCP Development Environment](#1-setting-up-the-gcp-development-environment)
+    + [2. Infrastructure Setup with Terraform](#2-infrastructure-setup-with-terraform)
+    + [3. Configure Composer and dlt Hub for Data Ingestion](#3-configure-composer-and-dlt-hub-for-data-ingestion)
+    + [4. Develop Data Processing & Transformation Scripts](#4-develop-data-processing--transformation-scripts)
+    + [5. Automating the Data Pipeline Transformation with Composer](#5-automating-the-data-pipeline-transformation-with-composer)
+    + [6. Visualization with Streamlit](#6-visualization-with-streamlit)
 - [Project Summary and Specifications](#project-summary-and-specifications)
   * [Feedback](#feedback)
   * [Contributing](#contributing)
@@ -176,20 +177,20 @@ Terraform scripts are used to provision and manage all infrastructure components
 
 The Streamlit application is deployed on Cloud Run and is publicly accessible without authentication.
 
-# Hands On Time: Backloggd Video Game Analysis Data Pipeline - Implementation Steps
+# Backloggd Video Game Analysis Data Pipeline - Implementation Steps
 
 This section outlines the step-by-step implementation of the Backloggd video game analysis data pipeline on Google Cloud Platform (GCP).
 
-# Prerequisites
+## Prerequisites
 
 Before starting this project, ensure you have the following set up:
 
-## 1. Google Cloud Platform (GCP) Account and Project
+### 1. Google Cloud Platform (GCP) Account and Project
 
 * **GCP Account:** A valid Google Cloud Platform account with appropriate permissions (e.g., Project Owner, Editor) to create and manage resources.  If you don't have one, create a free trial account.  You'll need a billing account linked to your project.
 * **GCP Project:** A dedicated GCP project for this data pipeline. Create a new project within your GCP console if you don't already have one.
 
-## 2. Development Environment
+### 2. Development Environment
 
 * **Git:**  Install Git on your local machine. Git is essential for version control and collaborating on the project's codebase.  Familiarize yourself with basic Git commands (clone, commit, push, pull).
 * **Python:** Install Python 3.7 or higher. The data processing and transformation scripts are written in Python.  It's recommended to use a virtual environment to manage project dependencies.
@@ -201,7 +202,7 @@ Before starting this project, ensure you have the following set up:
 * **Code Editor/IDE:** Choose a code editor or IDE suitable for Python development (e.g., VS Code, PyCharm, Atom).
 
 
-## 3. Required Tools and Libraries
+### 3. Required Tools and Libraries
 
 * **Google Cloud CLI (gcloud):** Install and configure the Google Cloud CLI (`gcloud`). This command-line interface is essential for interacting with GCP services.  Authenticate your `gcloud` CLI with your GCP project.
 * **Terraform:** Install Terraform. This Infrastructure as Code (IaC) tool will be used to provision and manage GCP resources.
@@ -210,7 +211,7 @@ Before starting this project, ensure you have the following set up:
 * **Apache Airflow (Cloud Composer):** While Cloud Composer is managed by GCP, familiarize yourself with basic Airflow concepts (DAGs, operators, connections).
 
 
-## 4. Python Packages
+### 4. Python Packages
 
 After activating your virtual environment, install the required Python packages:
 
@@ -220,25 +221,25 @@ pip install apache-airflow google-cloud-bigquery google-cloud-storage \
             streamlit kaggle pandas numpy  # Add other necessary packages
 ```
 
-## 5. Kaggle API Key (If using Kaggle directly)
+### 5. Kaggle API Key (If using Kaggle directly)
 
 * Obtain a Kaggle API key by creating a `kaggle.json` file as described in the Kaggle API documentation. This is required if you're accessing the Backloggd dataset directly from Kaggle.
 
 
 
-## 6. Access and Permissions
+### 6. Access and Permissions
 
 * Ensure you have the necessary permissions within your GCP project to create and manage resources (GCS buckets, BigQuery datasets, Cloud Composer environments, Cloud Run services).  The "Project Editor" role or similar should be sufficient.
 
+## Hands On Time: Step By Step
 
-
-## 1. Setting up the GCP Development Environment
+### 1. Setting up the GCP Development Environment
 
 * Create a new Google Cloud Platform (GCP) project.
 * Set up a new GitHub Codespaces environment for development.
 * Install and configure the Google Cloud SDK (gcloud) and other necessary command-line tools.
 
-## 2. Infrastructure Setup with Terraform
+### 2. Infrastructure Setup with Terraform
 
 * **Provision Google Cloud Storage (GCS):** Use Terraform to create the necessary GCS buckets for storing raw data and processed files.  Provide Terraform templates with configurable names for each bucket.  
     * folder/filename: `terraform/gcs.tf`
@@ -251,7 +252,7 @@ pip install apache-airflow google-cloud-bigquery google-cloud-storage \
   **GCP Variables file:** File to set variables of gcp projec user and roles / permissions used to provisioning all resources bellow
     * folder/filename: `terraform/variables.tf`  
 
-## 3. Configure Composer and dlt Hub for Data Ingestion
+### 3. Configure Composer and dlt Hub for Data Ingestion
 
 * **Configure Airflow Connections:**  In the Cloud Composer Airflow UI, configure connections to:
     * Kaggle API
@@ -262,7 +263,7 @@ pip install apache-airflow google-cloud-bigquery google-cloud-storage \
     * Upload the raw CSV data to the designated GCS bucket.
     * Download game images from the Kaggle API and store them in GCS.
 
-## 4. Develop Data Processing & Transformation Scripts
+### 4. Develop Data Processing & Transformation Scripts
 
 * **Dataflow Processing:** Develop Dataflow scripts (Python) to:
     * Read raw data from GCS.
@@ -276,14 +277,14 @@ pip install apache-airflow google-cloud-bigquery google-cloud-storage \
     * Create materialized views for optimized query performance, scheduled for monthly refreshes.
     * Include comprehensive tests and documentation within dbt to ensure data quality and pipeline reliability.
 
-## 5. Automating the Data Pipeline Transformation with Composer
+### 5. Automating the Data Pipeline Transformation with Composer
 
 * **Configure dbt Cloud Connection:** In the Airflow UI, configure the connection to dbt Cloud.
 * **Orchestrate with Airflow:**  Create DAGs in Composer to automate the data processing and transformation steps:
     * Run the Dataflow pipeline to process and load data into BigQuery.
     * Trigger dbt Cloud to execute the defined models and refresh materialized views.
 
-## 6. Visualization with Streamlit
+### 6. Visualization with Streamlit
 
 * **Deploy Streamlit on Cloud Run:**  Set up and deploy the Streamlit application on Cloud Run. Include necessary libraries and dependencies in the Cloud Run deployment configuration.
 * **Develop Streamlit Dashboard:** Create an interactive Streamlit dashboard to visualize the processed and transformed data:
